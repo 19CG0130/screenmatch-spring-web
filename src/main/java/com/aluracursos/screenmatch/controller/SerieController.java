@@ -30,5 +30,8 @@ public class SerieController {
     public List<SerieDTO> obtenerLanzamientosMasRecientes(){
         return servicio.obtenerLanzamientosMasRecientes();
     }
-
+    @GetMapping("/{id}")
+    public SerieDTO obtenerPorId(@PathVariable Long id){
+        return servicio.obtenerPorId(id);
+    }
 }
